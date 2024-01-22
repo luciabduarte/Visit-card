@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(238, 238, 238);
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('../img/background.jpeg') no-repeat left center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 570px;
+    margin: auto;
+    text-align: center;
+  }
+
+ 
+
+  menu {
+    height: 5vh;
+  }
+
+  article > img {
+    display: block;
+    margin: auto;
+    border: 4px solid white;
+    border-radius: 50%;
+  }
+
+  article > h1 {
+    font-family: 'NomeDaFonte', sans-serif; /* Substitua 'NomeDaFonte' pela fonte desejada */
+    font-size: 3em; /* Isso triplicará o tamanho padrão */
+    text-align: center;
+    line-height: 1.5;
+    padding: 0 5px;
+    color: yellow; /* Título Maximus em amarelo */
+  }
+
+  main {
+    flex: 1 0 auto;
+    min-height: 60vh;
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 5%; /* Move o conteúdo 5% para mais perto do início da imagem */
+    padding-left: 20px; /* Adiciona espaçamento à esquerda */
+  }
+
+  main > p, h3 {
+    color: white;
+    font-family: 'Arial', sans-serif; /* Escolha a fonte desejada */
+    font-size: 16px; /* Tamanho da fonte */
+    line-height: 1.5; /* Altura da linha (espaçamento entre linhas) */
+    margin-bottom: 20px;
+  }
+
+  main > hr {
+    border: 1px solid rgb(128, 128, 128);
+  }
+
+  main > ul > li {
+    padding: 10px 10px; 
+    list-style-position: inside;  
+  }
+
+  main > ul > li > .link {
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline;
+    color: white;
+    padding: 10px;
+    background-color: black;
+  }
+
+  main > ul > li > .link:hover {
+    transform: translate(-4%, -5%);
+    box-shadow: 2px 2px 8px yellow;
+    background-color: rgb(46, 46, 46);
+  }
+
+  main > ul > li > .link > a{
+    text-decoration: none;
+    color: white;
+  }
+
+  main > ul > .icones {
+    display: inline-block;
+    margin: 15px auto;
+  }
+
+  main > ul > .icones > a > img {
+    box-shadow: 2px 2px 4px #dfdb12;
+    border-radius: 50%;
+  }
+
+  main > ul > .icones > a > img:hover {
+    box-shadow: 2px 2px 8px #2305c9;
+    border-radius: 50%;
+    transform: translate(-4%, -5%);
+  }
+
+  .lista {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  footer {
+    height: 5vh;
+    flex-shrink: 0;
+    background-color: yellow;
+    height: 10vh;
+    border-top: 5px solid yellow; /* Borda superior amarela */
+    border-bottom: 5px solid yellow; /* Borda inferior amarela */
+  }
+
+  /* Estilos para o container dos botões */
+  .modern-button-container {
+    display: flex; /* Alinha os botões horizontalmente */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 20px; /* Espaçamento superior */
+  }
+
+  /* Estilos para os botões */
+  .modern-button {
+    display: flex; /* Permite que o ícone e o texto sejam alinhados verticalmente */
+    flex-direction: column; /* Alinha o ícone acima do texto */
+    justify-content: center; /* Centraliza o conteúdo dentro do botão */
+    align-items: center; /* Centraliza o conteúdo dentro do botão */
+    text-decoration: none; /* Remove sublinhado padrão dos links */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave ao botão */
+    width: 120px; /* Largura inicial do botão */
+    height: 120px; /* Altura inicial do botão */
+    color: #fff; /* Cor do texto (branco) */
+  }
+
+  /* Estilos para os botões redondos */
+  .round-icon img {
+    border-radius: 50%; /* Torna a imagem redonda */
+    width: 70%; /* Largura da imagem ocupando 70% do espaço do botão */
+    height: auto; /* Altura automática para manter a proporção */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave à imagem */
+  }
+
+  /* Estilos para o texto dos botões */
+  .button-label {
+    margin-top: 5px; /* Espaçamento entre a imagem e o texto */
+    font-size: 14px; /* Tamanho do texto */
+    font-weight: bold; /* Peso da fonte (negrito) */
+  }
+
+  /* Estilos para o hover dos botões */
+  .round-icon:hover img {
+    transform: scale(1.5); /* Aumenta a imagem em 50% ao passar o mouse sobre o botão */
+    width: 100%; /* Largura da imagem ao passar o mouse ocupando 100% do espaço do botão */
+  }
+  
+
+  @media (max-width: 400px) {
+    .modern-button {
+      width: calc(50% - 10px); /* Define a largura dos botões para 50% da largura do contêiner menos o espaçamento entre eles */
+      height: auto; /* Altura automática para manter a proporção */
+    }
+  
+    .modern-button-container {
+      flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha */
+      gap: 10px; /* Espaçamento entre os botões */
+    }
+  }
+  
+  
